@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-  
 
-export default function Contact() {
+export default function Contact({ theme }) {
+  const isLight = theme === 'light';
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
@@ -31,30 +31,30 @@ export default function Contact() {
             transform: rotateY(0deg) rotateX(0deg);
           }
           50% {
-            transform: rotateY(180deg) rotateX(180deg);
+            transform: rotateY(45deg) rotateX(45deg);
           }
           100% {
             transform: rotateY(0deg) rotateX(0deg);
           }
         }
       `}</style>
-      <div className="min-h-screen w-full flex items-center justify-center">
+      <div className={`min-h-screen w-full flex items-center justify-center ${isLight ? 'bg-gray-100' : ''}`}>
         <motion.div 
            aria-label="Contact form with 3d animation"
-           className="max-w-md w-full mx-auto mt-9 rounded-3xl bg-neutral-900 backdrop-blur-md shadow-lg p-8"
+           className={`max-w-md w-full mx-auto mt-9 rounded-3xl ${isLight ? 'bg-white text-gray-900' : 'bg-neutral-900 text-white'} backdrop-blur-md shadow-lg p-8`}
            style={rotate3DStyle}
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
            exit={{ opacity: 0, y: 20 }}
            transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl font-extrabold text-white text-center mb-8 drop-shadow-lg">
+          <h1 className={`text-3xl font-extrabold text-center mb-8 drop-shadow-lg ${isLight ? 'text-gray-900' : 'text-white'}`}>
             Contact Me
           </h1>
 
           {!submitted ? (
             <form onSubmit={handleSubmit} noValidate>
-              <label htmlFor="name" className="block mb-2 font-semibold text-white drop-shadow-md">
+              <label htmlFor="name" className={`block mb-2 font-semibold drop-shadow-md ${isLight ? 'text-gray-900' : 'text-white'}`}>
                 Name
               </label>
               <input
@@ -66,10 +66,10 @@ export default function Contact() {
                 placeholder="Your full name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full mb-6 px-4 py-3 rounded-xl bg-white bg-opacity-20 text-black placeholder-white placeholder-opacity-70 shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                className={`w-full mb-6 px-4 py-3 rounded-xl ${isLight ? 'bg-gray-200 text-gray-900 placeholder-gray-600' : 'bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70'} shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl`}
               />
 
-              <label htmlFor="email" className="block mb-2 font-semibold text-white drop-shadow-md">
+              <label htmlFor="email" className={`block mb-2 font-semibold drop-shadow-md ${isLight ? 'text-gray-900' : 'text-white'}`}>
                 Email
               </label>
               <input
@@ -81,10 +81,10 @@ export default function Contact() {
                 placeholder="example@mail.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full mb-6 px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70 shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                className={`w-full mb-6 px-4 py-3 rounded-xl ${isLight ? 'bg-gray-200 text-gray-900 placeholder-gray-600' : 'bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70'} shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl`}
               />
 
-              <label htmlFor="message" className="block mb-2 font-semibold text-white drop-shadow-md">
+              <label htmlFor="message" className={`block mb-2 font-semibold drop-shadow-md ${isLight ? 'text-gray-900' : 'text-white'}`}>
                 Message
               </label>
               <textarea
@@ -96,7 +96,7 @@ export default function Contact() {
                 placeholder="Write your message here..."
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full mb-6 px-4 py-3 rounded-xl bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70 shadow-inner resize-none focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                className={`w-full mb-6 px-4 py-3 rounded-xl ${isLight ? 'bg-gray-200 text-gray-900 placeholder-gray-600' : 'bg-white bg-opacity-20 text-white placeholder-white placeholder-opacity-70'} shadow-inner resize-none focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl`}
               />
 
               <button
@@ -111,7 +111,7 @@ export default function Contact() {
             <div
               role="alert"
               tabIndex={0}
-              className="text-center text-lg font-semibold text-green-300 drop-shadow-lg"
+              className={`text-center text-lg font-semibold drop-shadow-lg ${isLight ? 'text-green-700' : 'text-green-300'}`}
             >
               Thank you for contacting me! I will get back to you soon.
             </div>
@@ -121,5 +121,3 @@ export default function Contact() {
     </>
   );
 }
-
- 

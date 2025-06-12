@@ -6,9 +6,8 @@ import { useState,useEffect } from 'react'
 function Textchanger() {
       const texts = React.useMemo(() => [
         "Hi, I'am akhil sharma",
-        " software developer",
-        "   web developer",
         "  frontend developer",
+        " I love to code",
       ], []);
      const [ currentText, setCurrentText ] = useState("");
      const [endValue, setEndValue] = useState(0);

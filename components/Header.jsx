@@ -1,11 +1,18 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ theme, toggleTheme }) => {
   const [menuOpen, setMenuOpen] = React.useState(false)
 
-  // Close menu on nav click (for mobile)
-  const handleNavClick = () => setMenuOpen(false)
+
+
+  // Scroll to section smoothly
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      setMenuOpen(false)
+    }
+  }
 
   return (
     <nav className="w-full text-white px-4 sm:px-8 md:px-20 pt-6 flex justify-between items-center flex-wrap" role="navigation" aria-label="Main navigation">
@@ -25,27 +32,45 @@ const Header = () => {
 
       {/* Navigation Links */}
       <ul
-        className={`
-          fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex-col items-center justify-center gap-8 z-40
-          transition-transform duration-300 ease-in-out
-          ${menuOpen ? 'flex' : 'hidden'}
-          md:static md:flex md:flex-row md:bg-transparent md:w-auto md:h-auto md:gap-6 md:items-center
-        `}
+        className={
+          "fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex-col items-center justify-center gap-8 z-40 " +
+          (menuOpen ? "flex" : "hidden") +
+          " md:static md:flex md:flex-row md:bg-transparent md:w-auto md:h-auto md:gap-6 md:items-center"
+        }
         id="primary-navigation"
         aria-label="Primary"
         role="menu"
       >
         <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <NavLink to="/" role="menuitem" onClick={handleNavClick}>Home</NavLink>
+          <button role="menuitem" onClick={() => scrollToSection('home')}>Home</button>
         </li>
         <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <NavLink to="/about" role="menuitem" onClick={handleNavClick}>About</NavLink>
+          <button role="menuitem" onClick={() => scrollToSection('about')}>About</button>
         </li>
         <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <NavLink to="/projects" role="menuitem" onClick={handleNavClick}>Projects</NavLink>
+          <button role="menuitem" onClick={() => scrollToSection('projects')}>Projects</button>
         </li>
         <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <NavLink to="/contact" role="menuitem" onClick={handleNavClick}>Contact</NavLink>
+          <button role="menuitem" onClick={() => scrollToSection('contact')}>Contact</button>
+        </li>
+        {/* Dark/Light Mode Toggle Button */}
+        <li className="px-4 py-2 hover:animate-pulse" role="none">
+          <button
+            role="menuitem"
+            onClick={toggleTheme}
+            aria-label="Toggle dark/light mode"
+            className="bg-gray-700 dark:bg-gray-200 text-white dark:text-gray-800 px-3 py-1 rounded-full  flex items-center justify-center"
+          >
+            {theme === 'light' ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m8.485-8.485h-1M4.515 12.515h-1m15.364 4.95l-.707-.707M6.343 6.343l-.707-.707m12.728 12.728l-.707-.707M6.343 17.657l-.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+              </svg>
+            )}
+          </button>
         </li>
         {/* Close button for mobile menu */}
         <button
