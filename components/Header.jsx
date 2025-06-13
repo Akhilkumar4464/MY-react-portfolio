@@ -41,20 +41,20 @@ const Header = ({ theme, toggleTheme }) => {
         aria-label="Primary"
         role="menu"
       >
-        <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <button role="menuitem" onClick={() => scrollToSection('home')}>Home</button>
+        <li className="px-4 py-2 hover:animate-pulse cursor-pointer" role="none">
+          <button role="menuitem" className="cursor-pointer" onClick={() => scrollToSection('home')}>Home</button>
         </li>
-        <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <button role="menuitem" onClick={() => scrollToSection('about')}>About</button>
+        <li className="px-4 py-2 hover:animate-pulse cursor-pointer" role="none">
+          <button role="menuitem" className="cursor-pointer" onClick={() => scrollToSection('about')}>About</button>
         </li>
-        <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <button role="menuitem" onClick={() => scrollToSection('projects')}>Projects</button>
+        <li className="px-4 py-2 hover:animate-pulse cursor-pointer" role="none">
+          <button role="menuitem" className="cursor-pointer" onClick={() => scrollToSection('projects')}>Projects</button>
         </li>
-        <li className="px-4 py-2 hover:animate-pulse" role="none">
-          <button role="menuitem" onClick={() => scrollToSection('contact')}>Contact</button>
+        <li className="px-4 py-2 hover:animate-pulse cursor-pointer" role="none">
+          <button role="menuitem" className="cursor-pointer" onClick={() => scrollToSection('contact')}>Contact</button>
         </li>
         {/* Dark/Light Mode Toggle Button */}
-        <li className="px-4 py-2 hover:animate-pulse" role="none">
+        <li className="px-4 py-2 hover:animate-pulse " role="none">
           <button
             role="menuitem"
             onClick={toggleTheme}

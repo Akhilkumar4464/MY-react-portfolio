@@ -31,7 +31,7 @@ export default function Contact({ theme }) {
             transform: rotateY(0deg) rotateX(0deg);
           }
           50% {
-            transform: rotateY(45deg) rotateX(45deg);
+            transform: rotateY(30deg) rotateX(30deg);
           }
           100% {
             transform: rotateY(0deg) rotateX(0deg);

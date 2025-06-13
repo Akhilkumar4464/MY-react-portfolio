@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+
+
+/* Selection styles */
+::selection {
+    color: #00e6e6;
+}
+
+/* Robo-style custom cursor */
+
+
+/* Scrollbar smoothing styles */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b4a4a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #009999;
+}

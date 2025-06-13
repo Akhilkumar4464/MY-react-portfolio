@@ -36,7 +36,7 @@ function Home({ theme }) {
         <button
           type="button"
           className="text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-blue-500 border-none focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-full text-sm sm:text-base px-5 sm:px-7 py-2 sm:py-3 text-center shadow-md sm:shadow-lg transition-all duration-300 transform hover:scale-105"
-          onClick={() => window.location.href = '/#/about'}
+          onClick={() => window.location.href = '#about'}
         >
           About Me
         </button>

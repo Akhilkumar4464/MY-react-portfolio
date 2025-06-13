@@ -37,7 +37,11 @@ function App() {
 
   return (
     <div
-      className="h-screen md:h-screen w-full bg-gradient-to-r from-slate-500 to-slate-900 md:scroll-m-0 md:w-screen flex flex-col overflow-y-auto"
+      className={`h-screen md:h-screen w-full md:scroll-m-0 md:w-screen flex flex-col overflow-y-auto ${
+        theme === 'dark'
+          ? 'bg-gradient-to-r from-slate-500 to-slate-900 text-white'
+          : 'bg-gradient-to-r from-gray-500 to-gray-500 text-gray-900'
+      }`}
     >
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="flex-grow">
