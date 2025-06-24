@@ -5,25 +5,25 @@ const projects = [
   {
     name: "Portfolio2",
     description: "A modern personal portfolio website showcasing my skills and projects.",
-    github: "https://github.com/yourusername/portfolio2",
+    github: "https://github.com/Akhilkumar4464/portfolio2",
     demo: "https://portfolio2-demo.com",
   },
   {
     name: "User Dash Board",
     description: "A responsive dashboard for managing user data and analytics.",
-    github: "https://github.com/yourusername/user-dash-board",
+    github: "https://github.com/Akhilkumar4464/user-dash-board",
     demo: "https://user-dashboard-demo.com",
   },
   {
     name: "Spotify Clone",
     description: "A clone of Spotify with music streaming and playlist features.",
-    github: "https://github.com/yourusername/spotify-clone",
+    github: "https://github.com/Akhilkumar4464/spotify-clone",
     demo: "https://spotify-clone-demo.com",
   },
   {
     name: "Akhil's To-Do App",
     description: "A simple and intuitive to-do list application to manage tasks.",
-    github: "https://github.com/yourusername/akhil-to-do-app",
+    github: "https://github.com/Akhilkumar4464/akhil-to-do-app",
     demo: "https://akhil-todo-demo.com",
   },
 ];
