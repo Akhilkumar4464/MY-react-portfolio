@@ -1,21 +1,19 @@
 import Textchanger from './Textchanger';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
-
 function Home({ theme }) {
   const isLight = theme === 'light';
 
   return (
     <div
       className={
-        "h-screen w-full mt-2 flex flex-col md:flex-row items-start justify-between p-4 sm:p-6 md:p-20  shadow-xl sm:shadow-2xl transition-all duration-700 ease-in-out " +
+        "h-screen w-full mt-2 flex flex-col md:flex-row items-center justify-center p-4 sm:p-6 md:p-20 shadow-xl sm:shadow-2xl transition-all duration-700 ease-in-out " +
         (isLight ? "bg-gray-100 text-gray-900" : "bg-gradient-to-r from-slate-500 to-slate-900 bg-opacity-80 text-white")
       }
     >
-      
       <div
         className={
-          "w-full md:w-1/2 pt-6 md:pt-10 flex flex-col items-start justify-center space-y-4 sm:space-y-6 " +
+          "w-full md:w-1/2 pt-6 md:pt-10 flex flex-col items-center justify-center space-y-4 sm:space-y-6 " +
           (isLight ? "text-gray-900" : "")
         }
       >
@@ -24,13 +22,13 @@ function Home({ theme }) {
             <Textchanger />
           </h1>
         </span>
-        <p className="text-base sm:text-xl mt-2 sm:mt-3 md:text-2xl leading-relaxed drop-shadow">
+        <p className="text-base sm:text-xl mt-2 sm:mt-3 md:text-2xl leading-relaxed drop-shadow text-center">
           A passionate web developer with a knack for creating dynamic and responsive web applications.
         </p>
-        <p className="text-base sm:text-xl md:text-2xl leading-relaxed drop-shadow">
+        <p className="text-base sm:text-xl md:text-2xl leading-relaxed drop-shadow text-center">
           I love coding and I'm always eager to learn new technologies.
         </p>
-        <p className={"text-xs sm:text-sm md:text-2xl italic " + (isLight ? "text-gray-600" : "text-gray-300")}>
+        <p className={"text-xs sm:text-sm md:text-2xl italic " + (isLight ? "text-gray-600" : "text-gray-300") + " text-center"}>
           Let's connect and build something amazing together!
         </p>
         <button
@@ -77,20 +75,6 @@ function Home({ theme }) {
           >
             <FaLinkedinIn />
           </a>
-        </div>
-      </div>
-      <div
-        className="w-full md:w-1/2 flex items-center justify-center bg-transparent mt-6 md:mt-0"
-      >
-        <div
-          className="relative group"
-        >
-          <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-tr from-pink-500 via-purple-500 to-blue-500 rounded-full blur-lg sm:blur-xl opacity-60 group-hover:opacity-90 transition-all duration-500 animate-pulse"></div>
-          <img
-            src="assests/akhil.jpg"
-            alt="Akhil's Portfolio"
-            className="relative z-10 shadow-xl sm:shadow-2xl mt-4 sm:mt-10 transition-transform duration-700 ease-in-out hover:scale-110 hover:rotate-3 animate-fadeInUp w-80 h-80 sm:w-80 sm:h-80 md:w-80 md:h-80 object-cover rounded-full border-4 sm:border-8 border-white/20"
-          />
         </div>
       </div>
     </div>
