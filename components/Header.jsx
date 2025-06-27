@@ -18,19 +18,18 @@ const Header = ({ theme, toggleTheme }) => {
     <nav className="w-full text-white px-4 sm:px-8 md:px-20 pt-6 flex justify-between items-center flex-wrap" role="navigation" aria-label="Main navigation">
       <span className="text-lg sm:text-xl md:text-4xl font-bold tracking-wide">AKHIL'S PORTFOLIO</span>
 
-      {/* Hamburger Button */}
+      {/* Hamburger Button for Mobile */}
       <button
         aria-label="Toggle menu"
         aria-expanded={menuOpen}
         aria-controls="primary-navigation"
-        className="md:hidden flex items-center bg-black bg-opacity-30 rounded-full p-2 hover:bg-opacity-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-white"
+        className="md:hidden flex flex-col items-center justify-center bg-black bg-opacity-30 rounded-full p-2 hover:bg-opacity-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-white"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        <img src="../../assets/menu_open_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="" aria-hidden="true" />
-        <span className="sr-only">Show menu</span>
+        <span className={`flex w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'transform rotate-45 translate-y-1.5' : ''}`}></span>
+        <span className={`flex w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}></span>
+        <span className={`flex w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'transform -rotate-45 -translate-y-1.5' : ''}`}></span>
       </button>
-
-      {/* Navigation Links */}
       <ul
         className={
           "fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex-col items-center justify-center gap-8 z-40 " +

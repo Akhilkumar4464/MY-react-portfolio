@@ -18,12 +18,12 @@ const projects = [
     name: "Spotify Clone",
     description: "A clone of Spotify with music streaming and playlist features.",
     github: "https://github.com/Akhilkumar4464/spotify-clone",
-    demo: "https://spotify-clone-demo.com",
+    demo: "https://spotify-clone-mu-red.vercel.app/",
   },
   {
     name: "Akhil's To-Do App",
     description: "A simple and intuitive to-do list application to manage tasks.",
-    github: "https://github.com/Akhilkumar4464/akhil-to-do-app",
+    github: "https://github.com/Akhilkumar4464/TO-Doapp",
     demo: "https://akhil-todo-demo.com",
   },
 ];
