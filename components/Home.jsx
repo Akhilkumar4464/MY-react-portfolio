@@ -87,7 +87,7 @@ function Home({ theme }) {
         >
           <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-tr from-pink-500 via-purple-500 to-blue-500 rounded-full blur-lg sm:blur-xl opacity-60 group-hover:opacity-90 transition-all duration-500 animate-pulse"></div>
           <img
-            src="assests/akhil.jpg"
+            src="/assests/akhil.jpg"
             alt="Akhil's Portfolio"
             className="relative z-10 shadow-xl sm:shadow-2xl mt-4 sm:mt-10 transition-transform duration-700 ease-in-out hover:scale-110 hover:rotate-3 animate-fadeInUp w-80 h-80 sm:w-80 sm:h-80 md:w-80 md:h-80 object-cover rounded-full border-4 sm:border-8 border-white/20"
           />
