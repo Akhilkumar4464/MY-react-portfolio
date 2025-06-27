@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 function About({ theme }) {
   const isLight = theme === 'light';
@@ -55,13 +54,7 @@ function About({ theme }) {
   ];
 
   return (
-    <motion.div
-      className={`${bgMain} backdrop-blur-2xl p-6 rounded-lg ${shadowMain} ${textMain}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      transition={{ duration: 0.6 }}
-    >
+    <div className={`${bgMain} backdrop-blur-2xl p-6 rounded-lg ${shadowMain} ${textMain}`}>
       <section className={`${sectionBg} py-16 px-6 max-w-4xl mx-auto`}>
         <div className="text-center">
           <h2 className={`text-4xl font-extrabold mb-4 ${sectionText}`}>
@@ -97,7 +90,7 @@ function About({ theme }) {
           </p>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 }
 

@@ -1,12 +1,43 @@
-# React + Vite
+# Akhil Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio website built with React, Vite, and TailwindCSS.
 
-Currently, two official plugins are available:
+## Available Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In the project directory, you can run:
 
-## Expanding the ESLint configuration
+### `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Runs the app in development mode.  
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+The page will reload if you make edits.  
+You will also see any lint errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.  
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run preview`
+
+Locally preview the production build.  
+This is useful to test the build before deploying.
+
+## Deployment
+
+After running `npm run build`, deploy the contents of the `dist` folder to your preferred hosting service.
+
+## Environment Variables
+
+You can add environment variables for production in a `.env.production` file at the root of the project.
+
+## Linting
+
+Run `npm run lint` to check for linting errors.
+
+## Additional Notes
+
+- Ensure you have Node.js installed.
+- This project uses Vite as the build tool and development server.
+- TailwindCSS is used for styling.
