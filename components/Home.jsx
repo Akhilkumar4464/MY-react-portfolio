@@ -1,14 +1,21 @@
-import Textchanger from './Textchanger';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import Textchanger from "./Textchanger";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 function Home({ theme }) {
-  const isLight = theme === 'light';
+  const isLight = theme === "light";
 
   return (
     <div
       className={
         "h-screen w-full mt-2 flex flex-col md:flex-row items-center justify-center p-4 sm:p-6 md:p-20 shadow-xl sm:shadow-2xl transition-all duration-700 ease-in-out " +
-        (isLight ? "bg-gray-100 text-gray-900" : "bg-gradient-to-r from-slate-500 to-slate-900 bg-opacity-80 text-white")
+        (isLight
+          ? "bg-gray-100 text-gray-900"
+          : "bg-gradient-to-r from-slate-500 to-slate-900 bg-opacity-80 text-white")
       }
     >
       <div
@@ -23,18 +30,28 @@ function Home({ theme }) {
           </h1>
         </span>
         <p className="text-base sm:text-xl mt-2 sm:mt-3 md:text-2xl leading-relaxed drop-shadow text-center">
-          A passionate web developer with a knack for creating dynamic and responsive web applications.
+          I’m a passionate web developer with a knack for building dynamic,
+          responsive, and user-centric web applications. I specialize in
+          crafting seamless digital experiences using modern frontend
+          technologies and frameworks.
         </p>
         <p className="text-base sm:text-xl md:text-2xl leading-relaxed drop-shadow text-center">
-          I love coding and I'm always eager to learn new technologies.
+          I love coding and am always eager to learn new technologies to improve my skills and stay
+          ahead in the ever-evolving tech landscape.
         </p>
-        <p className={"text-xs sm:text-sm md:text-2xl italic " + (isLight ? "text-gray-600" : "text-gray-300") + " text-center"}>
-          Let's connect and build something amazing together!
+        <p
+          className={
+            "text-xs sm:text-sm md:text-2xl italic " +
+            (isLight ? "text-gray-600" : "text-gray-300") +
+            " text-center"
+          }
+        >
+         I love building with code and consistently seek out new technologies to grow as a developer.
         </p>
         <button
           type="button"
           className="text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-blue-500 border-none focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-full text-sm sm:text-base px-5 sm:px-7 py-2 sm:py-3 text-center shadow-md sm:shadow-lg transition-all duration-300 transform hover:scale-105"
-          onClick={() => window.location.href = '#about'}
+          onClick={() => (window.location.href = "#about")}
         >
           About Me
         </button>
@@ -78,7 +95,7 @@ function Home({ theme }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

@@ -6,7 +6,7 @@ import { useState,useEffect } from 'react'
 function Textchanger() {
       const texts = React.useMemo(() => [
         "Hi, I'am akhil sharma",
-        "  frontend developer",
+        "  Frontend Developer",
         " I love to code",
       ], []);
      const [ currentText, setCurrentText ] = useState("");
@@ -31,7 +31,7 @@ function Textchanger() {
           setIndex((prev) => (prev + 1) % texts.length);
         }
       }
-    }, 50);
+    }, 70);
     return () => clearInterval(intervalId);
   }, [isForward, endValue, index, texts]);
 
